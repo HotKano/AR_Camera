@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">애니모비GO</string>
+
+    <string name="testBtn">자체 제작 테스트</string>
+    <string name="mapBtn">API 커스텀 테스트</string>
+    <string name="rotateBtn">회전 테스트</string>
+    <string name="arMapBtn">지도</string>
+
+    <string name="camera_guide1">제품 효율등급 라벨 사진 촬영</string>
+    <string name="camera_guide2">라벨을 프레임 안으로 맞춰 촬영해주세요.</string>
+    <string name="result_title">환급대상 제품검색 결과</string>
+    <string name="result_text1">인식된 효율등급 라벨의 정보를 확인해주세요.</string>
+    <string name="result_text2"><u>실제 정보와 다른 경우 직접 모델명을 수정하실 수 있습니다.</u></string>
+    <string name="result_model">모델명</string>
+
+    <string name="result_rePhoto">재촬영</string>
+    <string name="result_next">다음</string>
+
+    <!-- alert -->
+    <string name="MSG_SHOW">보기</string>
+    <string name="MSG_CLOSE">닫기</string>
+    <string name="ok">네</string>
+    <string name="cancel">아니오</string>
+    <string name="title">으뜸효율 환급사업</string>
+    <string name="msg">원활한 환급 서비스를 위해 사진 및 폴더 권한을 활성화 후 다시 시도해주세요.</string>
+
+    <string name="msg_finish">종료하시겠습니까?</string>
+    <string name="MSG_GOTO_APP_MARKET">업데이트를 위해 현재 앱을 종료하고 이동합니다.</string>
+
+</resources>

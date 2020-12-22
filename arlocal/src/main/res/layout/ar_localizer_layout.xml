@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextureView
+            android:id="@+id/texture_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.netguru.arlocalizerview.arview.ARLabelView
+            android:id="@+id/ar_label_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/serviceZone"
+            android:background="@android:color/transparent" />
+
+        <!-- 좌측 사이드 Toast 기능 View -->
+        <TextView
+            android:id="@+id/toastTest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ar_titleZone"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/left_tost_background"
+            android:gravity="center_vertical"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/serviceZone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/addressFlowZone"
+            android:layout_gravity="bottom"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/chanceValue"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="남은횟수"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/areaBenefit"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="주변혜택"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/setAreaDistance"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="거리설정"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+        <!-- 최 하단 주소 표시 -->
+        <LinearLayout
+            android:id="@+id/addressFlowZone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/addressFlowText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <!-- 레이더뷰 -->
+        <com.netguru.arlocalizerview.arview.ARRadarView
+            android:id="@+id/ar_raider_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/serviceZone"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/radar_background" />
+
+        <!-- 타이틀 존 -->
+        <RelativeLayout
+            android:id="@+id/ar_titleZone"
+            android:layout_width="match_parent"
+            android:layout_height="50.5dp"
+            android:background="@color/ar_background">
+
+            <ImageButton
+                android:id="@+id/ar_backBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="15dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/abc_vector_test" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center_horizontal"
+                android:lineSpacingExtra="-1sp"
+                android:text="@string/app_name"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <ImageButton
+                android:id="@+id/mapBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="15dp"
+                android:background="@android:color/transparent"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_ar_map_icon_ver2" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</merge>

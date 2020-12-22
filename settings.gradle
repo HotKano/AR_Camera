@@ -1,0 +1,3 @@
+include ':arlocal'
+include ':app'
+rootProject.name = "CameraARProject"

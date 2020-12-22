@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <color name="guide1_color">#ffffff</color>
+    <color name="guide2_color">#32a15f</color>
+    <color name="intro_background">#E4EBDE</color>
+
+    <color name="result_background">#32a15f</color>
+    <color name="result_reCapture">#277b49</color>
+    <color name="result_title_color">#FFFFFF</color>
+    <color name="result_ok_color">#32a15f</color>
+    <color name="result_layout_background">#FFFFFF</color>
+    <color name="result_text_color">#FFFFFF</color>
+    <color name="result_model_background">#e5e5e5</color>
+
+    <color name="result_rePhoto_color">#96ffc1</color>
+    <color name="result_next_color">#32a15f</color>
+
+    <color name="camera_background">#000000</color>
+
+    <color name="result_model_color_title">#010101</color>
+    <color name="result_model_color">#333333</color>
+    <color name="white">#FFFFFF</color>
+
+</resources>

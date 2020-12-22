@@ -1,0 +1,90 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+//apply plugin: 'com.vanniktech.android.junit.jacoco'
+
+def versionMajor = 0
+def versionMinor = 1
+def versionPatch = 0
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.1"
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 1
+        versionName "${versionMajor}.${versionMinor}.${versionPatch}"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    buildTypes {
+        release {
+            debuggable false
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+        xmlReport true
+    }
+}
+
+dependencies {
+    //Kotlin
+    implementation libs.kotlin
+
+    // Support
+    implementation libs.appCompat
+    implementation libs.materialComponents
+
+    // ViewModels LiveData
+    implementation libs.lifecycleExtensions
+    implementation libs.ktxViewModel
+
+    // KTX
+    implementation libs.ktx
+    implementation libs.ktxReactiveStreams
+
+    // Dagger
+    implementation libs.dagger
+    implementation libs.daggerAndroid
+    implementation libs.daggerAndroidSupport
+    kapt proc.dagger
+    kapt proc.daggerAndroid
+    compileOnly proc.javaxAnnotation
+
+    //RxJava
+    implementation libs.rxJava2
+    implementation(libs.rxKotlin2) {
+        exclude module: 'rxjava'
+        exclude module: 'kotlin-stdlib'
+    }
+    implementation(libs.rxAndroid2) {
+        exclude module: 'rxjava'
+    }
+
+    // Timber
+    implementation libs.timber
+
+    //Location
+    implementation libs.playServicesLocation
+    implementation libs.rxLocation
+
+    //Camera
+    implementation libs.cameraXCore
+    implementation libs.camera2
+
+    // Unit testing
+    testImplementation test.junit
+    testImplementation test.mockito
+    testImplementation test.mockitoKotlin
+    testImplementation test.archTesting
+}
+apply from: 'publish.gradle'

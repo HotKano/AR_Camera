@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">애니모비GO</string>
+    <string name="essential_permissions_not_granted_info">Essential permissions missing, main functionality disabled</string>
+    <string name="permission_recheck_question">Check again</string>
+    <string name="error_title">Error</string>
+    <string name="error_message">"Error : %1$s. Restart compass ?"</string>
+    <string name="arMapBtn">지도보기</string>
+    <string name="ar_nearGuide">선택하신 혜택의 50m이내로\n이동하여 다시 시도해주세요.</string>
+</resources>
